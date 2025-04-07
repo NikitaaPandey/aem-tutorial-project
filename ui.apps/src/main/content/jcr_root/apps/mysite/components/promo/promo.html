@@ -1,0 +1,29 @@
+<div class="cmp-promo" data-sly-use.model="com.mysite.core.models.PromoModel">
+
+    <!-- Title from Page Properties -->
+    <h1 class="cmp-promo__title">${properties.title}</h1>
+    
+    <!-- Description from Page Properties -->
+    <p class="cmp-promo__text">${properties.description}</p>
+
+    <!-- Promo Title from Sling Model -->
+    <p class="cmp-promo__model">${model.promoTitle}</p>
+
+    <!-- CTA Link from Page Properties -->
+	<a class="cmp-promo__cta" 
+	   href="${properties.link}" 
+	   target="_blank" 
+	   role="button" 
+	   onclick="buttonClicked()">
+	   ${properties.ctalabel}
+	</a>
+
+    <!-- i18n Label -->
+    <div class="cmp-promo__label">
+        ${'promo.btn.label' @ i18n}
+    </div>
+
+    <!-- Clientlib Include -->
+    <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories='mysite.promo'}" />
+</div>

@@ -1,0 +1,4 @@
+{
+	"scheduler.concurrent": true,
+	"myParameter": "local"
+}

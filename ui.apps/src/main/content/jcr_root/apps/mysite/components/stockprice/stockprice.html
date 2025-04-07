@@ -1,0 +1,10 @@
+<!-- HTL (Sightly) to display stock symbol -->
+<div class="stock-price-component">
+    <h2>Stock Price for: <span data-stock-symbol="${properties.stockSymbol}">${properties.stockSymbol}</span></h2>
+    <p>Current Price: <span id="stock-price">Loading...</span></p>
+</div>
+
+<!-- Clientlib JS -->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='mysite.stockprice'}" />
+<sly data-sly-call="${clientlib.js @ categories='mysite.stockprice'}" />
